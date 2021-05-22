@@ -1,0 +1,15 @@
+dotnet test MyClassesTest.csproj --settings MyClasses.runsettings
+
+dotnet test MyClassesTest.csproj --settings MyClasses.runsettings --logger "console;verbosity=detailed"
+
+dotnet test MyClassesTest.csproj --settings MyClasses.runsettings --logger "html"
+
+dotnet test MyClassesTest.csproj --settings MyClasses.runsettings --filter "Name=FileNameDoesExist"
+
+dotnet test MyClassesTest.csproj --settings MyClasses.runsettings --filter "Name~FileName"
+
+dotnet test MyClassesTest.csproj --settings MyClasses.runsettings --filter "(Name=FileNameDoesExist) | (Name=IsAllLowerCaseTest)"
+
+dotnet test MyClassesTest.csproj --settings MyClasses.runsettings --filter "Priority=1"
+
+dotnet test MyClassesTest.csproj --settings MyClasses.runsettings --filter "TestCategory=NoException"
